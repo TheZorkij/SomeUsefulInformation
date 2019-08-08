@@ -1,0 +1,1 @@
+lsof -i TCP:8080 | grep LISTEN - for receiving services which listen to 8080 port
