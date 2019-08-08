@@ -5,3 +5,9 @@
 * _SPC m s b_: loads the buffer in the running REPL, which is very handy for testing several functions.
 * _SPC m s f_: loads the function at the cursor in the running REPL.
 * _SPC m t a_: runs all of the tests in the namespace, while SPC m t t runs the test under the cursor.
+### Invaluable shortcuts in Spacemacs for Clojure code editing
+* _SPC k $_: jump to the end of current sexp.
+* _SPC k 0_: jump to the begining of current sexp.
+* _SPC k w_: wrap current expression with parentheses.
+* _SPC k W_: unwrap current sexp with parentheses.
+* _SPC k y_: copy current sexp.
