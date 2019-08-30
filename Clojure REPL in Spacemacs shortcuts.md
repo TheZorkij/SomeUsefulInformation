@@ -1,4 +1,5 @@
 ### Invaluable shortcuts in Spacemacs for Clojure REPL
+* _Alt p_: scroll REPL history.
 * _SPC m s i_: creates a CIDER REPL and connects to it. I always have one running when I’m writing any Clojure code.
 * _SPC m h n_: brings up a menu to browse the namespace. I primarily use this to access Clojure.core, to see a list of available functions, and to quickly navigate to the source code.
 * _SPC m e b_: evaluates the buffer, SPC m e f evaluates the function, and SPC m e f evaluates the selected region in the REPL.
