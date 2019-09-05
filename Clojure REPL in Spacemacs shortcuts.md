@@ -13,9 +13,11 @@
 * _SPC k W_: unwrap current sexp with parentheses.
 * _SPC k y_: copy current sexp.
 ### Firefox shortcuts
+* _Ctrl t_: new tab.
 * _Ctrl PgUp/PgDown_: scroll tabs.
 * _Ctrl Shift PgUp/PgDown_: move tab.
 * _Ctrl w_: close tab.
 * _Ctrl Shift_: undo close tab.
+* _Ctrl n_: new window.
 * _Ctrl Shift w_: close window.
 * _Ctrl Shift n_: undo close window.
