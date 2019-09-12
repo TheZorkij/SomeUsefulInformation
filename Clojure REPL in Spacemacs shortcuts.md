@@ -12,7 +12,7 @@
 * _SPC k w_: wrap current expression with parentheses.
 * _SPC k W_: unwrap current sexp with parentheses.
 * _SPC k y_: copy current sexp.
-*_SPC k L_: jump to the end of current sexp
+* _SPC k L_: jump to the end of current sexp
 ### Firefox shortcuts
 * _Ctrl t_: new tab.
 * _Ctrl PgUp/PgDown_: scroll tabs.
