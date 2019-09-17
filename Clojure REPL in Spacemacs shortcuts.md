@@ -1,3 +1,6 @@
+### Invaluable Emacs features
+* _M-x ibuffer_: hardcore buffer manager.
+
 ### Invaluable shortcuts in Spacemacs for Clojure REPL
 * _Alt p_: scroll REPL history.
 * _SPC m s i_: creates a CIDER REPL and connects to it. I always have one running when I’m writing any Clojure code.
