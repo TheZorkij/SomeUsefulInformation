@@ -1,6 +1,6 @@
 ### Invaluable Emacs features
 * _M-x ibuffer_: hardcore buffer manager.
-* _J_: line joining(the one with cursos on it and the one below it)
+* _J_: line joining(the one with cursor on it and the one below it)
 
 
 ### Invaluable shortcuts in Spacemacs for Clojure REPL
