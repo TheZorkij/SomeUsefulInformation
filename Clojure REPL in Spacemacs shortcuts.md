@@ -1,5 +1,7 @@
 ### Invaluable Emacs features
 * _M-x ibuffer_: hardcore buffer manager.
+* _J_: joins two lines
+
 
 ### Invaluable shortcuts in Spacemacs for Clojure REPL
 * _Alt p_: scroll REPL history.
