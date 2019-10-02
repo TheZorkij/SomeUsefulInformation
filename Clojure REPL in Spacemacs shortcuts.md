@@ -1,8 +1,6 @@
 ### Invaluable Emacs features
 * _M-x ibuffer_: hardcore buffer manager.
 * _J_: line joining(the one with cursor on it and the one below it)
-
-
 ### Invaluable shortcuts in Spacemacs for Clojure REPL
 * _Alt p_: scroll REPL history.
 * _, s i_: creates a CIDER REPL and connects to it. I always have one running when I’m writing any Clojure code.
@@ -28,3 +26,5 @@
 * _Ctrl n_: new window.
 * _Ctrl Shift w_: close window.
 * _Ctrl Shift n_: undo close window.
+### Random useful stuff
+* ```$ docker exec -it <container_name> psql postgres``` connect to db directly.
