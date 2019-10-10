@@ -1,6 +1,7 @@
 ### Invaluable Emacs features
 * _M-x ibuffer_: hardcore buffer manager.
 * _J_: line joining(the one with cursor on it and the one below it)
+* _, r r f_: rename current file
 ### Invaluable shortcuts in Spacemacs for Clojure REPL
 * _Alt p_: scroll REPL history.
 * _, s i_: creates a CIDER REPL and connects to it. I always have one running when I’m writing any Clojure code.
