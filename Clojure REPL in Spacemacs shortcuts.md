@@ -29,4 +29,13 @@
 * _Ctrl Shift w_: close window.
 * _Ctrl Shift n_: undo close window.
 ### Random useful stuff
+
+* How to build indexes in Aidbox
+```js
+GET /Organization/$lookup?name=lk&\
+  mode=index&\ //this returns db console query to execute
+  by=name,contact.name.family,contact.name.given,identifier.value;address.city,address.state,type.text;address.line&\ //these are indexed fields
+  q=oral+mar&sort=name //GET query
+```
+  
 * ```$ docker exec -it <container_name> psql postgres``` connect to db directly.
