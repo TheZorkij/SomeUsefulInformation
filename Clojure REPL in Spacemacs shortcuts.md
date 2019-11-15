@@ -42,3 +42,6 @@ GET /Organization/$lookup?name=lk&\
 ```
   
 * ```$ docker exec -it <container_name> psql postgres``` connect to db directly.
+
+* ```find src/ -type f -name "*.so" -exec cp {} dst/ \;``` copy files matching certain pattern.
+
