@@ -12,6 +12,9 @@
 * _, s b_: loads the buffer in the running REPL, which is very handy for testing several functions.
 * _, s f_: loads the function at the cursor in the running REPL.
 * _, t a_: runs all of the tests in the namespace, while _, t t_ runs the test under the cursor.
+#### Debuging
+* _, d b_: instrument expression at point.
+* _, d v_: inspect expression at point.
 ### Invaluable shortcuts in Spacemacs for Clojure code editing
 * _SPC k $_: jump to the end of current sexp.
 * _SPC k 0_: jump to the begining of current sexp.
