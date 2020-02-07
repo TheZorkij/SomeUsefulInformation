@@ -44,4 +44,5 @@ GET /Organization/$lookup?name=lk&\
 * ```$ docker exec -it <container_name> psql postgres``` connect to db directly.
 
 * ```find src/ -type f -name "*.so" -exec cp {} dst/ \;``` copy files matching certain pattern.
-
+* Load to psql from file:
+```gzip -dc sytocheck-hl7-messages.back.gz | psql -h localhost -U postgres -W testbox -c 'copy hl7v2message (id, txid, cts, ts, resource_type, status, resource) from stdin'```
