@@ -31,6 +31,11 @@
 * _Ctrl n_: new window.
 * _Ctrl Shift w_: close window.
 * _Ctrl Shift n_: undo close window.
+### Networking
+* ```nmcli device show wlp3s0 | grep IP4.DNS``` show DNS in subnet.
+* ```ifconfig``` very much data.
+* ```route -n``` show routing table.
+
 ### Random useful stuff
 
 * How to build indexes in Aidbox
