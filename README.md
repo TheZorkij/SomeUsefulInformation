@@ -21,7 +21,17 @@
 * _SPC k w_: wrap current expression with parentheses.
 * _SPC k W_: unwrap current sexp with parentheses.
 * _SPC k y_: copy current sexp.
-* _SPC k L_: jump to the end of current sexp
+* _SPC k L_: jump to the end of current sexp.
+### PostgreSQL
+* ```\q``` quit.
+* ```drop database <name>``` drop db from root.
+* ```\dt <name>``` list tables all/by name.
+* ```\d <name>``` list relations all/by name.
+* Add column to table:
+```
+ALTER TABLE <table>
+ADD COLUMN <column> <datatype>
+```
 ### Firefox shortcuts
 * _Ctrl t_: new tab.
 * _Ctrl PgUp/PgDown_: scroll tabs.
