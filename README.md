@@ -66,3 +66,8 @@ $ psql -h localhost -p 5432 testbox -U postgres
 * ```find src/ -type f -name "*.so" -exec cp {} dst/ \;``` copy files matching certain pattern.
 * Load to psql from file:
 ```gzip -dc sytocheck-hl7-messages.back.gz | psql -h localhost -U postgres -W testbox -c 'copy hl7v2message (id, txid, cts, ts, resource_type, status, resource) from stdin'```
+* Aidbox Job handling:
+```GET /AidboxJob``` list Aidbox jobs
+```GET /AidboxJobStatus``` Aidbox jobs statuses
+```POST /AidboxJob/process-eras/$run``` run job
+```POST /AidboxJob/process-eras/$stop``` stop job (may need to run several times cuz races)
