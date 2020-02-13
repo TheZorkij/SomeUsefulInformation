@@ -56,7 +56,12 @@ GET /Organization/$lookup?name=lk&\
   q=oral+mar&sort=name //GET query
 ```
   
-* ```$ docker exec -it <container_name> psql postgres``` connect to db directly.
+* Connect to db directly
+```
+$ docker exec -it <container_name> psql postgres
+or
+$ psql -h localhost -p 5432 testbox -U postgres
+```
 
 * ```find src/ -type f -name "*.so" -exec cp {} dst/ \;``` copy files matching certain pattern.
 * Load to psql from file:
