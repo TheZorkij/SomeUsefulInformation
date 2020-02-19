@@ -46,6 +46,9 @@ ADD COLUMN <column> <datatype>
 * ```ifconfig``` very much data.
 * ```route -n``` show routing table.
 
+### Docker
+* ```docker exec -i -t {DOCKER_CONTAINER_NAME} /bin/bash``` run bash inside your docker container
+
 ### Random useful stuff
 
 * How to build indexes in Aidbox
