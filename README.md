@@ -78,8 +78,8 @@ $ psql -h localhost -p 5432 testbox -U postgres
   - ```POST /AidboxJob/process-eras/$run``` run job
   - ```POST /AidboxJob/process-eras/$stop``` stop job (may need to run several times cuz races)
   
-### Spacemacs hax
-## SQL setup
+## Spacemacs hax
+### SQL setup
 * Add to .spacemacs:
 ```
 (defun db-cfg ()
