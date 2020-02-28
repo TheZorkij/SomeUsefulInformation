@@ -22,6 +22,7 @@
 * _SPC k W_: unwrap current sexp with parentheses.
 * _SPC k y_: copy current sexp.
 * _SPC k L_: jump to the end of current sexp.
+
 ### PostgreSQL
 * ```\q``` quit.
 * ```drop database <name>``` drop db from root.
@@ -76,3 +77,60 @@ $ psql -h localhost -p 5432 testbox -U postgres
   - ```GET /AidboxJobStatus``` Aidbox jobs statuses
   - ```POST /AidboxJob/process-eras/$run``` run job
   - ```POST /AidboxJob/process-eras/$stop``` stop job (may need to run several times cuz races)
+  
+### Spacemacs hax
+## SQL setup
+* Add to .spacemacs:
+```
+(defun db-cfg ()
+  (interactive)
+  (save-excursion
+    (let (p1 p2 dbcon)
+      (search-backward "---- db:")
+      (setq p1 (point))
+      (setq p2 (line-end-position))
+      (substring (buffer-substring-no-properties p1 p2) 8 )
+      )))
+
+
+(defun run-sql ()
+  (interactive)
+  (save-excursion
+    (let (p1 p2 dbcon)
+      (search-backward "----")
+      (setq p1 (point))
+      (search-forward "----")
+      (search-forward "----")
+      (setq p2 (point))
+
+      (let (cmd output)
+        (setq cmd (buffer-substring-no-properties p1 p2))
+        (write-region p1 p2 "/tmp/epsql.sql")
+        (setq cmd (format "psql %s -f /tmp/epsql.sql -o /tmp/epsqlresp.sql" (db-cfg) cmd))
+        (setq output (shell-command-to-string cmd))
+        (message output)
+        (with-output-to-temp-buffer "sql-result"
+          (save-current-buffer
+            (set-buffer "sql-result")
+            (funcall (intern "sql-mode"))
+            (insert-file-contents "/tmp/epsqlresp.sql" nil nil nil t)
+            (insert
+             (format "----------- Result ------------\n%s-----------  End   ------------\n\n\n" output)))
+          )))))
+
+
+
+  (defun my-do ()
+    (interactive)
+    (if (equal major-mode 'sql-mode)
+        (run-sql)
+      (request)))
+      
+...
+
+(define-key evil-normal-state-map (kbd "RET") 'my-do)
+```
+* Make a .sql
+* Add to the top `---- db: -h localhost -p 5432 -U postgres testbox`
+* Run queries by pressing ENTER with `----` as separator.
+* Connect to kubectl prod via `-- kubectl port-forward <prod-db> 5444:5432`
