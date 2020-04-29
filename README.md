@@ -33,6 +33,18 @@
 ALTER TABLE <table>
 ADD COLUMN <column> <datatype>
 ```
+
+Make resource from another resource:
+```
+insert into organization(id, resource_type,status, txid, ts, cts, resource)
+select 
+ id id, 'Organization' resource_type,'created' status,  0 txid,  now() ts,  now() cts,
+  jsonb_strip_nulls(jsonb_build_object('address', jsonb_build_array(jsonb_build_object('line', jsonb_strip_nulls(jsonb_build_array((resource#>>'{Address1}'),(resource#>>'{Address2}'))), 'state', (resource#>>'{State}'), 'postalCode', (resource#>>'{Zip}'), 'city', (resource#>>'{City}'))), 'name', (resource#>>'{ClinicName}'),'type', jsonb_build_array(jsonb_build_object('text', 'Clinic')))) resource
+from cytocheckclinic
+where id not in (select id from organization where resource#>>'{type,0,text}' = 'Client')
+```
+
+
 ### Firefox shortcuts
 * _Ctrl t_: new tab.
 * _Ctrl PgUp/PgDown_: scroll tabs.
