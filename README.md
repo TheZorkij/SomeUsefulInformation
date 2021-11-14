@@ -16,6 +16,8 @@
 #### Debuging
 * _, d b_: instrument expression at point.
 * _, d v_: inspect expression at point.
+#### Install ripgrep
+* https://gist.github.com/pesterhazy/fabd629fbb89a6cd3d3b92246ff29779
 ### Invaluable shortcuts in Spacemacs for Clojure code editing
 * _SPC k $_: jump to the end of current sexp.
 * _SPC k 0_: jump to the begining of current sexp.
