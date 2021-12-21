@@ -96,6 +96,9 @@ $ psql -h localhost -p 5432 testbox -U postgres
   - ```GET /AidboxJobStatus``` Aidbox jobs statuses
   - ```POST /AidboxJob/process-eras/$run``` run job
   - ```POST /AidboxJob/process-eras/$stop``` stop job (may need to run several times cuz races)
+
+* Full text search regex:
+```(re-pattern (str "(?i).*" s ".*"))```
   
 ## Spacemacs hax
 ### SQL setup
